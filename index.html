@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" style="border-radius: 50%;" href="./assets/images/image.png">
+  <title>Plastkort | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<style>
+  .video-section {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    height: 400px;
+    /* Section height: full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Ensures video stays within the section */
+  }
+
+  /* Background video styling */
+  .background-video {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    z-index: -2;
+    /* Behind everything */
+  }
+
+  /* Gradient overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 115, 60, 0.8), rgba(255, 160, 90, 0.8));
+    /* Gradient color */
+    z-index: -1;
+    /* Above the video but below content */
+  }
+
+  /* Centered text styling */
+  .content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    /* Above gradient */
+  }
+
+  .content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+</style>
+
+<body>
+  <!-- pre loader -->
+  <div id="preloader">
+    <div class="wrapper-logo">
+      <div class="logo-icon">
+        <div class="logo-icon_contain">
+          <div class="logo-icon_front"></div>
+          <div class="logo-icon_back"></div>
+        </div>
+      </div>
+      <svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"
+        viewBox="0 0 1000 240.95">
+        <path class="text-move color-text"
+          d="M244.45,109.09v33c0,2.76-.92,4-3.68,4H227.43c-2.76,0-3.68-1.22-3.68-4V45.78c0-2.76.92-4,3.68-4h32.19c27.75,0,37.1,12.11,37.1,25V84.1c0,12.88-9.35,25-37.1,25Zm0-50.13v33h15.17c10.28,0,16.56-3.83,16.56-11.35V70.46c0-7.67-6.28-11.5-16.56-11.5Z" />
+        <path class="text-move color-text"
+          d="M330.42,142.05c0,2.76-.92,4-3.52,4H314.17c-2.76,0-3.83-1.22-3.83-4V42.87c0-2.76,1.07-4,3.83-4H326.9c2.6,0,3.52,1.23,3.52,4Z" />
+        <path class="text-move color-text"
+          d="M346.21,90.54c0-13.65,9-22.07,31-22.07,22.38,0,30.81,8.42,30.81,22.07v51.51c0,2.76-1.07,4-3.68,4h-11.5c-2.76,0-3.37-1.22-3.68-4l-.3-3.22a35,35,0,0,1-22.69,8.43c-15,0-22.08-9-22.08-19.16v-6.9c0-10.27,7.82-19.32,23-19.32h21.15V92.07c0-5.52-2.6-8.58-11.49-8.58s-11.81,2.45-11.81,8v1.07c0,2.76-1.07,3.83-3.68,3.83H349.89c-2.76,0-3.68-1.07-3.68-3.83Zm42,34.18V116H371c-6,0-7.36,2.91-7.36,6.89v2.46c0,4.6,3.07,6,7.67,6C378.4,131.32,384.69,127.33,388.21,124.72Z" />
+        <path class="text-move color-text"
+          d="M463.09,88.85c0-4.75-4.6-6.28-11.19-6.28s-11,1.53-11,6.28v1.69c0,3.06,2.61,4.6,4.75,5.37l22.08,7.81c9.5,3.37,14.72,8.59,14.72,16v7.81c0,9.81-8.74,19.78-31,19.78s-30.66-10-30.66-19.78V124c0-2.45.92-3.53,3.53-3.53h11.34c2.61,0,3.52,1.08,3.52,3.53v2.6c0,4.76,5.37,6.44,12.27,6.44s12.42-1.68,12.42-6.44V124c0-2.61-2-4-6.9-5.83L434.73,110c-5.67-2.15-12.11-8.59-12.11-16.25V88.85c0-9.81,7.2-20.38,29.43-20.38,22.08,0,29.28,10.57,29.28,20.38v2.91c0,2.61-.76,3.53-3.52,3.53H466.46c-2.45,0-3.37-.92-3.37-3.53Z" />
+        <path class="text-move color-text"
+          d="M536.6,70c2.61,0,3.83.92,3.83,3.52v8.59c0,2.76-1.22,3.83-3.83,3.83h-14V121.2c0,5.67,3.68,8.28,12.27,8.28h3.37c2.76,0,3.83,1.07,3.83,3.83v8.89c0,2.76-1.07,3.83-3.83,3.83h-6.44c-22.53,0-29.43-7.66-29.43-22.68V85.94H494.9c-2.6,0-3.67-1.07-3.67-3.83V74.44c0-2.6,1.07-3.37,3.67-3.68L502,70h.46V55.28c0-2.76,1.07-3.83,3.83-3.83H519c2.76,0,3.68,1.07,3.68,3.83V70Z" />
+        <path class="text-move color-text"
+          d="M619.84,142.2c1.22,1.84.76,3.83-1.84,3.83h-14c-2.61,0-4.14-1.84-5.52-3.83l-21.46-31.27h-3.38V142.2c0,2.61-.92,3.83-3.52,3.83H557.44c-2.75,0-3.83-1.22-3.83-3.83V42.71c0-2.6,1.08-3.83,3.83-3.83h12.73c2.6,0,3.52,1.23,3.52,3.83v53h3.38l19-22.23c1.68-1.84,3.52-3.83,6.13-3.83H616c2.61,0,3.38,2,1.84,3.83L593,102.65Z" />
+        <path class="text-move color-text"
+          d="M627,91c0-13.64,10.58-22.53,33.11-22.53S693.21,77.36,693.21,91v33.57c0,13.8-10.57,22.69-33.11,22.69S627,138.37,627,124.57Zm46.14,1.68c0-5.67-4.45-8.27-13-8.27s-13,2.6-13,8.27v30.2c0,5.83,4.45,8.44,13,8.44s13-2.61,13-8.44Z" />
+        <path class="text-move color-text"
+          d="M753.73,72.14V82c0,2.76-1.23,3.84-4,4a36.77,36.77,0,0,0-22.07,9v47.06c0,2.76-.92,4-3.53,4H711.42c-2.76,0-3.84-1.22-3.84-4V73.37c0-2.61,1.08-3.68,3.84-3.68h11.8c2.76,0,3.53,1.07,3.68,3.68l.46,5.36c4-4.29,11.34-10.26,22.38-10.26C752.5,68.47,753.73,69.54,753.73,72.14Z" />
+        <path class="text-move color-text"
+          d="M807.06,70c2.61,0,3.84.92,3.84,3.52v8.59c0,2.76-1.23,3.83-3.84,3.83H793.12V121.2c0,5.67,3.67,8.28,12.26,8.28h3.37c2.76,0,3.83,1.07,3.83,3.83v8.89c0,2.76-1.07,3.83-3.83,3.83h-6.44c-22.53,0-29.43-7.66-29.43-22.68V85.94h-7.51c-2.61,0-3.68-1.07-3.68-3.83V74.44c0-2.6,1.07-3.37,3.68-3.68l7-.76h.46V55.28c0-2.76,1.07-3.83,3.83-3.83h12.73c2.76,0,3.68,1.07,3.68,3.83V70Z" />
+        <path class="text-move color-text"
+          d="M848.64,136.7a11.54,11.54,0,0,1-23.07-.14c0-6.73,4.81-11.54,11.68-11.54C843.84,125,848.64,130,848.64,136.7Z" />
+        <path class="text-move color-text"
+          d="M871.76,70c2.14,0,2.76.92,2.91,2.91l.31,4.9a38.55,38.55,0,0,1,25.44-9c14.26,0,21.62,8.28,21.62,19.62V143c0,2.14-.77,3.06-2.76,3.06h-8.89c-2,0-2.91-.92-2.91-3.06v-51c0-6.29-2.92-10.12-11.35-10.12-9.81,0-17.47,5.21-20.85,7.82V143c0,2.14-.76,3.06-2.76,3.06h-8.89c-2.14,0-2.91-.92-2.91-3.06V72.91c0-2,.77-2.91,2.91-2.91Z" />
+        <path class="text-move color-text"
+          d="M985.74,138.52c-4.14,3.53-12,8.74-24.53,8.74-14.1,0-21.61-8.13-21.61-19.47V73.06c0-2.14.77-3.06,2.76-3.06h8.89c2,0,2.91.92,2.91,3.06v51.05c0,6.44,2.92,10.12,11.35,10.12,9.65,0,16.71-5.06,19.93-7.67V73.06c0-2.14.76-3.06,2.76-3.06h9c2,0,2.76.92,2.76,3.06v70.06c0,2.15-.77,2.91-2.76,2.91H989c-2.15,0-2.76-.76-2.91-2.91Z" />
+        <path class="hidden-icon"
+          d="M114.47.92,37.28,34.14l83,192.76,77.17-33.22a11.21,11.21,0,0,0,5.87-14.74L129.2,6.78A11.21,11.21,0,0,0,114.47.92Z" />
+        <path class="hidden-icon"
+          d="M22.57,40.48,6.78,47.28A11.2,11.2,0,0,0,.92,62L75,234.16A11.2,11.2,0,0,0,89.77,240l15.78-6.79Z" />
+      </svg>
+    </div>
+  </div>
+  <!-- /pre loader -->
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <!-- Offert Plastkort -->
+    <section class="offert-plastkort">
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="" width="160px" height="40px">
+      </div>
+      <h1>Offert plastkort</h1>
+      <div class="text-center">
+        <p><b>Avsedd för:</b> Johan Lindberg<br>
+          <b>Förberedd av:</b> Johan Lindberg
+        </p>
+      </div>
+    </section>
+    <!-- /Offert Plastkort -->
+    <!-- signature -->
+    <div class="container signature">
+      <p>Hej Fredric!</p>
+      <p>
+        Tack för att ni har valt att kontakta oss på <strong style="color: #f37342;">Plastkort.nu</strong>! Med vår långa erfarenhet och expertis inom tryck av
+        plastkort med eget tryck, har vi haft glädjen att samarbeta med många liknande företag och leverera
+        högkvalitativa lösningar.
+      </p>
+      <p class="mt-0">
+        Nedan hittar ni det efterfrågade erbjudandet. Om ni har några frågor, funderingar eller önskar justeringar, är
+        ni alltid välkomna att höra av er. Vi ser fram emot möjligheten att arbeta tillsammans och bidra till er
+        framgång!
+      </p>
+      <p>Vänliga hälsningar,</p>
+      <p class="mt-0">Johan Lindberg</p>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-4 hover-border-7">
+        <span>Neka</span>
+      </button>
+      <button class="btn btn-2 hover-slide-up">
+        <span>&check; Signera</span>
+      </button>
+    </div>
+    <!-- /signature -->
+    <!-- video section -->
+    <section class="video-section">
+      <!-- Background video -->
+      <video autoplay muted loop class="background-video">
+        <source src="./assets/images/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <!-- Gradient overlay -->
+      <div class="overlay"></div>
+      <!-- Centered text -->
+      <div class="content">
+        <h1>Plastkort med eget tryck</h1>
+      </div>
+    </section>
+    <!-- /video section -->
+    <!-- footer -->
+    <footer class="footer">
+      <p class="text-center">By approving this document you agree to the <a href=""> Terms and Conditions.</a></p>
+    </footer>
+    <!-- /footer -->
+  </div>
+
+
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

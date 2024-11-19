@@ -1,0 +1,122 @@
+    :root {
+        --main-bg-color: #ff733c;
+        --main-color-icon: #fff;
+        --main-color-text: #fff;
+        --main-logo-width: 25vw;
+      }
+      
+      //////////////////////////////// INCREASE OR DECREACE THE ANIMATION SPEED.
+      
+      $acceleration: 2;
+      
+      //////////////////////////////// LOGO STYLES
+      
+      .wrapper-logo {
+        align-self: center;
+        justify-self: center;
+      
+        position: relative;
+        width: var(--main-logo-width);
+        min-width: 100px;
+        transform: translateZ(0px);
+      }
+      
+      #logo-svg {
+        display: block;
+        overflow: visible;
+      }
+      
+      .hidden-icon {
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+      .color-text {
+        fill: var(--main-color-text);
+      }
+      
+      @for $i from 1 through 12 {
+        #logo-svg .text-move:nth-child(#{$i}) {
+          animation-delay: ($acceleration+($i/10))+s;
+        }
+      }
+      
+      #logo-svg .text-move {
+        opacity: 0;
+        transform: translateZ(0) translateX(-5%) scaleX(1.1);
+        transform-origin: left;
+        animation-name: moveText;
+        animation-duration: 300ms;
+        animation-timing-function: ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes moveText {
+        100% {
+          opacity: 1;
+          transform: translateZ(0) translateX(0) scaleX(1);
+        }
+      }
+      
+      .logo-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        perspective: 150px;
+        width: 20.4%;
+        height: 100%;
+        z-index: 1;
+      }
+      
+      .logo-icon_contain {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        width: 68.6%;
+        height: 87%;
+      }
+      
+      .logo-icon_front,
+      .logo-icon_back {
+        border-radius: 7%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(0) rotateZ(0deg) rotateY(0deg);
+        animation: giro ($acceleration+0.2s) cubic-bezier(0.64, 0.57, 0.67, 1.2) forwards;
+      }
+      
+      @keyframes giro {
+        100% {
+          transform: translateZ(0) rotateZ(-23.4deg) rotateY(1440deg);
+          opacity: 1;
+        }
+      }
+      
+      .logo-icon_front {
+        background-color: var(--main-color-icon);
+        backface-visibility: hidden;
+        z-index: 1;
+      }
+      
+      .logo-icon_front::after {
+        background-color: var(--main-bg-color);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20%;
+        width: 13%;
+        height: 100%;
+      }
+      
+      .logo-icon_back {
+        background-color: var(--main-color-icon);
+        z-index: 0;
+      }

@@ -1,0 +1,19 @@
+.footer{
+    padding: 10px;
+    background-color: rgba(235, 233, 233, 0.466);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #757575;
+    p{
+        font-size: 15px;
+    }
+    a{
+        cursor: pointer;
+        color: hsl(206deg 98.98% 45.9%);
+        text-decoration:none;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            color: hsl(206, 100%, 36%);
+            text-decoration: underline;
+        }
+    }
+}
