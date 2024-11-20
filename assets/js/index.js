@@ -3,7 +3,7 @@ window.onload = () => {
     // Wait for 4 seconds before hiding the preloader and displaying the main content
     setTimeout(() => {
         document.body.classList.add('show-content');
-    }, 3000); // 4000ms = 4 seconds
+    }, 4000); // 4000ms = 4 seconds
 };
 
 
