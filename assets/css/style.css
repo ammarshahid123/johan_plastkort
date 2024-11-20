@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap");
 :root {
   --main-bg-color: #ff733c;
   --main-color-icon: #fff;
@@ -223,12 +225,117 @@
   text-decoration: underline;
 }
 
+.progress-wrap {
+  right: 25px;
+  bottom: 25px;
+  color: white;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  border-radius: 50px;
+  -webkit-box-shadow: inset 0 0 0 2px white;
+          box-shadow: inset 0 0 0 2px white;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap input {
+  z-index: 10001;
+}
+
+.progress-wrap input:checked + html {
+  -ms-scroll-snap-type: unset;
+  scroll-snap-type: unset;
+}
+
+.progress-wrap.active-progress {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  background-color: white;
+}
+
+.progress-wrap::after {
+  position: absolute;
+  content: "↑";
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  color: #ff733c;
+  left: 0;
+  top: -2px;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap:hover::after {
+  opacity: 0;
+}
+
+.progress-wrap:hover::before {
+  opacity: 1;
+}
+
+.progress-wrap::before {
+  position: absolute;
+  content: "↑";
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  opacity: 0;
+  -webkit-text-fill-color: #ff733c;
+  left: 0;
+  top: -2px;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap svg path {
+  fill: none;
+}
+
+.progress-wrap svg.progress-circle path {
+  stroke: #ff733c;
+  stroke-width: 4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  height: 100%;
+  font-family: "Inter", sans-serif;
+  height: auto;
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f37342;
 }
 
 #preloader {
@@ -286,6 +393,80 @@ body, html {
 
 .text-center {
   text-align: center;
+}
+
+.printing-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  top: 10px;
+  right: 10px;
+  height: 0px;
+}
+.printing-dropdown .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.printing-dropdown .dropdown .dropdown-toggle {
+  background-color: #f37342;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.printing-dropdown .dropdown .dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px 0;
+  display: none;
+  width: 160px;
+  z-index: 1000;
+}
+.printing-dropdown .dropdown .dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+.printing-dropdown .dropdown .dropdown-menu .dropdown-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 16px;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+.printing-dropdown .dropdown .dropdown-menu .dropdown-item i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+.printing-dropdown .dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #f1f3f5;
+}
+.printing-dropdown .dropdown.active .dropdown-menu {
+  display: block;
 }
 
 .offert-plastkort {
@@ -503,4 +684,42 @@ body, html {
   opacity: 1;
   -webkit-transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;
   transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;
+}
+
+.pdf_above_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pdf_above_description .description {
+  width: 630px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.pdf_above_description .description p {
+  line-height: 1.6;
+  margin-bottom: 0px;
+}
+.pdf_above_description .description p strong {
+  font-weight: bolder;
+}
+.pdf_above_description .description p strong span {
+  color: #5d5d5b;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
 }

@@ -2,10 +2,19 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
+    font-family: "Inter", sans-serif;
+    height: auto;
     overflow-x: hidden;
 }  
+::-webkit-scrollbar{
+  width: 6px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #f37342;
+}
+::-webkit-scrollbar-track{
+}
+
 #preloader {
     position: fixed;
     top: 0;
@@ -52,6 +61,76 @@ body, html {
     text-align: center;
 }
 
+.printing-dropdown{
+  display: flex;
+  position: relative;
+  justify-content: end;
+  top: 10px;
+  right: 10px;
+  height: 0px;
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  
+    .dropdown-toggle {
+      background-color: #f37342;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 10px 0;
+      display: none;
+      width: 160px;
+      z-index: 1000;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #fff transparent;
+      }
+  
+      .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        color: #333;
+        font-size: 16px;
+        cursor: pointer;
+  
+        i {
+          margin-right: 8px;
+          font-size: 18px;
+        }
+  
+        &:hover {
+          background-color: #f1f3f5;
+        }
+      }
+    }
+  
+    &.active .dropdown-menu {
+      display: block;
+    }
+  }
+}
 .offert-plastkort{
     background-color: #ff733c;
     display: flex;
@@ -231,5 +310,29 @@ body, html {
         opacity: 1;
         transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;   
       }
+}
+.pdf_above_description{
+display: flex;
+margin: 30px 0px;
+justify-content: center;
+align-items: center;
+  .description{
+    width: 630px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    p{
+      line-height: 1.6;
+      margin-bottom: 0px;
+      strong{
+        font-weight: bolder;  
+        span{
+          color: #5d5d5b;
+          font-size: 16px;
+          font-family: "Inter", sans-serif;
+        }
+      }
+    }
+  }
 }
   
