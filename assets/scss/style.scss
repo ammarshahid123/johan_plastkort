@@ -163,7 +163,7 @@ body, html {
         text-align: left;
         font-family: "Inter", sans-serif;
         font-size: 16px;
-        width: 590px;
+        width: 630px;
         margin-bottom: 0px;
         line-height: 1.5;
         color: #3c3c3c;
@@ -185,7 +185,12 @@ body, html {
       align-items: center;
       gap: 10px;
       padding:15px 25px 15px 25px;
-      background-color: #f3f4f6;
+      background: transparent;
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        background-color: #f3f4f6;
+
+      }
     }
   .btn-signera{
     margin-left: 1em;
@@ -209,7 +214,7 @@ body, html {
   display: flex;
   justify-content: center;
   .text{
-    width: 590px;
+    width: 630px;
     p{
       font-size: 16px;
       line-height: 1.5;
@@ -217,6 +222,33 @@ body, html {
       strong{
         font-weight: bolder;
       }
+    }
+  }
+}
+.Om_digitaltryck{
+  display: flex;
+  justify-content: center;
+  .text{
+    width: 630px;
+    h2{
+      font-family: Inter;
+      font-size: 36px;
+      font-weight: 700;
+      span{
+        color: #f37342;
+      }
+    }
+    p{
+      font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color:rgb(17, 17, 17);
+  line-height:25px;
+    }
+    h3{
+      font-family: Inter;
+      font-size: 21px;
+      font-weight: 600;
     }
   }
 }
