@@ -498,11 +498,35 @@ body, html {
   font-weight: bolder;
 }
 
-.pdf_above_description {
+.cards .heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-bottom: 0.25em;
+}
+.cards .subtitle {
+  color: hsl(0, 0%, 35%);
+  font-weight: 300;
+}
+.cards .cards-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 70px;
+  padding: 0px 76px;
+  -ms-grid-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
+}
+.cards .cards-container .card {
+  width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 30px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -510,30 +534,14 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
 }
-.pdf_above_description .description {
-  width: 630px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.cards .cards-container .card .card-img img {
+  width: 350px;
+  height: 350px;
 }
-.pdf_above_description .description p {
-  line-height: 1.6;
-  margin-bottom: 0px;
-}
-.pdf_above_description .description p strong {
-  font-weight: bolder;
-}
-.pdf_above_description .description p strong span {
-  color: #5d5d5b;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
+.cards .cards-container .card .card-subtitle {
+  text-align: center;
+  color: hsl(0, 0%, 35%);
+  font-weight: 300;
 }
 
 .parter {
@@ -623,4 +631,42 @@ body, html {
   font-size: 17px;
   color: #10ce10;
   font-weight: 600;
+}
+
+.pdf_above_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pdf_above_description .description {
+  width: 630px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.pdf_above_description .description p {
+  line-height: 1.6;
+  margin-bottom: 0px;
+}
+.pdf_above_description .description p strong {
+  font-weight: bolder;
+}
+.pdf_above_description .description p strong span {
+  color: #5d5d5b;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
 }
