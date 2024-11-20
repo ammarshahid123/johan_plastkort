@@ -438,153 +438,44 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   margin: 40px 0px;
-  /*--- btn-2 ---*/
-  /* 6. hover-slide-down */
-  /* 7. hover-slide-up */
-  /*--- btn-4 ---*/
-  /* 17. hover-border-7 */
 }
-.buttons * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.buttons :active, .buttons :hover, .buttons :focus {
-  outline: 0 !important;
-  outline-offset: 0;
-}
-.buttons ::before,
-.buttons ::after {
-  position: absolute;
-  content: "";
-}
-.buttons .btn {
-  position: relative;
-  display: inline-block;
-  width: auto;
-  height: auto;
-  background-color: transparent;
+.buttons .btn-neka {
+  margin-left: 1em;
   border: none;
+  border-radius: 10px;
   cursor: pointer;
-  border-radius: 20px;
-  margin: 0px 10px;
-  min-width: 150px;
-}
-.buttons .btn span {
-  position: relative;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 20px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.buttons .btn-2::before {
-  background-color: #2cc01b;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  border-radius: 10px;
-}
-.buttons .btn-2 span {
-  color: #2cc01b;
-  border: 1px solid #2cc01b;
-  border-radius: 10px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.buttons .btn-2 span:hover {
-  color: rgb(255, 255, 255);
-  -webkit-transition: 0.2s 0.1s;
-  transition: 0.2s 0.1s;
-}
-.buttons .btn.hover-slide-down::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 0%;
-  width: 100%;
-}
-.buttons .btn.hover-slide-down:hover::before {
-  height: 100%;
-}
-.buttons .btn.hover-slide-up::before {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 0%;
-  width: 100%;
-}
-.buttons .btn.hover-slide-up:hover::before {
-  height: 100%;
-}
-.buttons .btn-4 span {
-  color: #1f2937;
+  color: #39424e;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 15px 25px 15px 25px;
   background-color: #f3f4f6;
+}
+.buttons .btn-signera {
+  margin-left: 1em;
+  border: none;
   border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 15px 25px 15px 25px;
+  background: #2cc01b;
 }
-.buttons .btn-4 span:hover {
-  color: rgb(54, 56, 55);
-}
-.buttons .btn-4::before,
-.buttons .btn-4::after {
-  width: 15%;
-  height: 2px;
-  background-color: rgb(54, 56, 55);
-  z-index: 2;
-}
-.buttons .btn.hover-border-7::before,
-.buttons .btn.hover-border-7::after {
-  bottom: 0;
-  -webkit-transition: width 0.2s 0.35s ease-out;
-  transition: width 0.2s 0.35s ease-out;
-}
-.buttons .btn.hover-border-7::before {
-  right: 50%;
-}
-.buttons .btn.hover-border-7::after {
-  left: 50%;
-}
-.buttons .btn.hover-border-7:hover::before,
-.buttons .btn.hover-border-7:hover::after {
-  width: 50%;
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-}
-.buttons .btn.hover-border-7 span::before,
-.buttons .btn.hover-border-7 span::after {
-  width: 0%;
-  height: 0%;
-  background: transparent;
-  opacity: 0;
-  z-index: 2;
-  -webkit-transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s 0.35s;
-  transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s 0.35s;
-}
-.buttons .btn.hover-border-7 span::before {
-  bottom: 0;
-  left: 0;
-  border-left: 2px solid rgb(54, 56, 55);
-  border-top: 2px solid rgb(54, 56, 55);
-}
-.buttons .btn.hover-border-7 span::after {
-  bottom: 0;
-  right: 0;
-  border-right: 2px solid rgb(54, 56, 55);
-  border-top: 2px solid rgb(54, 56, 55);
-}
-.buttons .btn.hover-border-7 span:hover::before,
-.buttons .btn.hover-border-7 span:hover::after {
-  width: 50%;
-  height: 96%;
-  opacity: 1;
-  -webkit-transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;
-  transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;
+.buttons .btn-signera i {
+  font-size: 25px;
+  margin-top: -5px;
 }
 
 .Plastkort_med_digitaltryck {
@@ -643,4 +534,93 @@ body, html {
   color: #5d5d5b;
   font-size: 16px;
   font-family: "Inter", sans-serif;
+}
+
+.parter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.parter .inner-txt {
+  width: 590px;
+}
+.parter .inner-txt .title {
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 7px;
+}
+.parter .inner-txt .subtitle {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.parter .inner-txt .subtitle .line {
+  height: 2px;
+  background-color: #0095ff;
+  width: 20px;
+}
+.parter .inner-txt .table .half-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
+}
+.parter .inner-txt .table .half-row .box {
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+}
+.parter .inner-txt .table .half-row .box .label {
+  font-size: 13px;
+  color: #737373;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.parter .inner-txt .table .half-row .box .data span {
+  font-size: 14px;
+  padding: calc(0.25 * var(--rem));
+  border-radius: 0.25em;
+}
+.parter .inner-txt .table .full-row {
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+}
+.parter .inner-txt .table .full-row .label {
+  font-size: 13px;
+  color: #737373;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.parter .inner-txt .table .full-row .data span {
+  font-size: 14px;
+  padding: calc(0.25 * var(--rem));
+  border-radius: 0.25em;
+}
+.parter .inner-txt .check-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #565e6c;
+}
+.parter .inner-txt .check-text i {
+  font-size: 17px;
+  color: #10ce10;
+  font-weight: 600;
 }
