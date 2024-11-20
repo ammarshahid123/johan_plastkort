@@ -311,6 +311,21 @@ body, html {
         transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;   
       }
 }
+.Plastkort_med_digitaltryck{
+  display: flex;
+  justify-content: center;
+  .text{
+    width: 590px;
+    p{
+      font-size: 16px;
+      line-height: 1.5;
+      font-family: "Inter", sans-serif;
+      strong{
+        font-weight: bolder;
+      }
+    }
+  }
+}
 .pdf_above_description{
 display: flex;
 margin: 30px 0px;
