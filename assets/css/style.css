@@ -504,6 +504,105 @@ body, html {
   font-weight: bolder;
 }
 
+.stripped-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.stripped-table .text {
+  width: 630px;
+}
+.stripped-table .text .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.65);
+  gap: 10px;
+}
+.stripped-table .text .table {
+  border: 1px solid #d9dce1;
+  overflow: hidden;
+}
+.stripped-table .text .table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: -1px;
+  padding: 9.8px 21px;
+}
+.stripped-table .text .table-row:not(:last-child) {
+  border-bottom: 1px solid #d9dce1;
+}
+.stripped-table .text .right-align {
+  text-align: right;
+  font-size: calc(1 * var(--rem) + 2px);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.grey-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.grey-table .text {
+  width: 630px;
+}
+.grey-table .text .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #000000;
+  gap: 10px;
+}
+.grey-table .text .table {
+  background-color: hsla(0, 0%, 0%, 0.05);
+  overflow: hidden;
+}
+.grey-table .text .table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 28px 7px 28px;
+  font-size: 16px;
+}
+.grey-table .text .total-row {
+  font-weight: bold;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-top: 4px solid #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.grey-table .text .right-align {
+  text-align: right;
+  white-space: nowrap;
+}
+
 .Om_digitaltryck {
   display: -webkit-box;
   display: -ms-flexbox;
