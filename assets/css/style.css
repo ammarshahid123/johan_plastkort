@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main-bg-color: #ff733c;
   --main-color-icon: #fff;
@@ -706,4 +707,105 @@ body, html {
   color: #5d5d5b;
   font-size: 16px;
   font-family: "Inter", sans-serif;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+.banner .banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.banner .banner-container .logo-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+.banner .banner-container .logo-grid .logo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.banner .banner-container .logo-grid .logo-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.banner .banner-container .logo-grid .logo-item .logo-icon {
+  position: relative;
+  width: 6.9rem;
+  height: 4rem;
+  color: #4b5563;
+}
+.banner .banner-container .logo-grid .logo-item .logo-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.banner .banner-container .logo-grid .logo-item .logo-name {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.Varför_välja_plastkort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+.Varför_välja_plastkort .text {
+  width: 630px;
+}
+.Varför_välja_plastkort .text .title {
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 7px;
+}
+.Varför_välja_plastkort .text h3 span {
+  line-height: 1.9;
+}
+
+@media (min-width: 768px) {
+  .logo-grid {
+    gap: 3rem;
+  }
+  .logo-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .logo-name {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .logo-grid {
+    gap: 4rem;
+  }
 }

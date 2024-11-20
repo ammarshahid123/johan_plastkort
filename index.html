@@ -16,6 +16,123 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <style>
+
+@media only screen and (min-width: 40em) {
+  .modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/**
+ * Modal
+ */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 600px;
+  max-width: 75rem;
+  min-height: 20rem;
+  padding: 1rem;
+  border-radius: 10px;
+  opacity: 0;
+  overflow-y: auto;
+  visibility: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  transform: scale(1.2);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.modal .close-modal {
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  right: 15px;
+  opacity: 0;
+  backface-visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.3s;
+}
+.modal .close-modal svg {
+  width: 1.75em;
+  height: 1.75em;
+}
+.modal .modal-content {
+  opacity: 0;
+  backface-visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.3s;
+  overflow: scroll;
+  margin: 50px 25px 10px 25px;
+  height: 80vh;
+}
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.modal.active .modal-content {
+  opacity: 1;
+}
+.modal.active .close-modal {
+  transform: translateY(10px);
+  opacity: 1;
+}
+/**
+ * Mobile styling
+ */
+@media only screen and (max-width: 39.9375em) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0;
+    transform: scale(1.1);
+    padding: 0 !important;
+  }
+  .close-modal {
+    right: 20px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .activity-dropdown {
   position: relative;
   width: 250px;
@@ -136,6 +253,54 @@
 </style>
 
 <body>
+  <!-- Modal 1 -->
+  <div class="modal-overlay" id="modal1Overlay">
+    <div class="modal" id="modal1">
+        <a class="close-modal">
+            <svg viewBox="0 0 20 20" fill="#000" width="20px" height="20px">
+                <path d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+            </svg>
+        </a>
+        <div class="modal-content">
+          <h3>Exkl. moms.</h3>
+          <p>Samtliga priser är exkl. moms.</p>
+          <h3>Tillämplighet</h3>
+          <p>Dessa allmänna villkor gäller vid utförande av avtalade tjänster mellan Beställare och Utställare. När Beställare anlitar Utställare ansas beställare ha acceptera dessa villkor. Avvikelser från villkoren ska vara skriftliga för att vara gällande.</p>
+          <h3>Uppdragets omfattning</h3>
+          <p>Utställare åtar sig att utföra tjänsten fackmässigt och ska med tillbörlig omsorg ta till vara på Beställarens intressen och samråda med denne i den utsträckning som behövs och är möjligt. Omfattningen av uppdraget kan komma att ändras under uppdragets gång utställare ska inhämta beställarens godkännande avseende åtgärder som ligger utanför ramen för uppdraget.</p> 
+          <h3>Uppdragets genomförande</h3>
+          <p>Baserat på vad som är tillämpligt från fall till fall ska Beställarens lämna Utställare, erforderlig tillgång till lokaler, information eller liknande som krävs för att genomföra uppdraget. Utställare ska utföra alla delar av avtalat åtagande i enlighet med bestämmelserna i leveransavtalet och dessa allmänna villkor och med den skicklighet, snabbhet och omsorg som Beställaren har anledning att förvänta sig av ett välrenommerat företag i branschen.</p>
+          <h3>Sekretess</h3>
+          <p>Beställare och Utövare förbinder sig att behandla all information som erhålls från, eller som uppkommer i samband med uppdraget med den andre parten strikt konfidentiellt och inte avslöja sådan information eller använda informationen för egen eller annans räkning, om inte den andre parten har givit skriftligt samtycke för sådan användning. Åtagandet enligt denna bestämmelse skall gälla även efter att parternas samarbete har upphört, och intill dess sådan information som avses härunder får anses ha kommit till allmän kännedom på annat sätt än genom brott mot detta avtal. Sekretesskyldigheten gäller inte när part är skyldig enligt lag, eller myndighetsbeslut att lämna ut uppgifter. Är part skyldig enligt lag att lämna ut uppgifter skall, innan sådant utlämnande sker, andra parten informeras därom. Om inte annat avtalats har Utställare rätt att använda beställarens namn och logo i referenslista samt annat material att användas i marknadsföringsändamål.</p>
+          <h3>Ansvar</h3>
+          <p>Utövare är skyldig att teckna lagstadgad ansvars och arbetsskadeförsäkring för sig själv och sina anställda. Om beställaren drabbas av förlust, som direkt följd av att beställaren misslyckats med att fullfölja åtaganden enligt detta kontrakt eller visat grov oaktsamhet i samband med utförandet av projektet, ansvarar utövaren för förlusten. Utställare ansvarar inte för någon följdförlust, badwill eller annan indirekt skada som Beställare lidit pga. eller i samband med resultatet av uppdraget.</p>
+          <h3>Rättigheter</h3>
+          <p>Beställaren erhåller ägande, upphovsrätt och andra rättigheter till program, analyser, rapporter, dokument och liknande som utställare producerar som en del av detta uppdrag.</p>
+          <h3>Förseningar</h3>
+          <p>Utställare ansvarar inte för förseningar på grund av leveransförseningar från andra leverantörer som utställare inte har ingått i avtal med. Utställare är inte ansvarig för eventuella förseningar på grund av kundrelationer. Om avtalet har blivit föremål för leverans vid angivna tider har Utställare rätt att skjuta upp leveransdatumet om kunden ändrar uppdraget / innehållet i uppdraget eller inte tillhandahåller aktuell information, ritningar, dokument, data eller liknande som är en förutsättning för uppdragets utförande.</p>
+          <h3>Betalningsvillkor</h3>
+          <p>Ytterligare arbete, ej specificerat i detta förslag, offereras och debiteras separat. Beloppet av den slutliga betalningen kan ändras om ytterligare komponenter önskats för detta projekt (t.ex. ytterligare ändring av koncept efter godkännande). Alla priser angivna är exkl. moms om inte annat angivits. Betalningsvillkor 10 dagar. Vid försenad betalning debiteras dröjsmålsränta med 24%. Vid orderbekräftelse faktureras 50% av avtalat arvode och resterande 50% när projektet är slutfört och godkänt av kund.</p>
+          <p>Faktureringsavgift vid postfaktura: 75 kr. Faktura via e-post är kostnadsfritt. Om ärendet ser ut att ta under 4 timmar påbörjas ärendet utan att estimeras, såvida estimering inte skriftligen begärs. Projektledning tillkommer med 25%.</p>
+          <h3>Estimerad tid</h3>
+          <p>Estimerad tid för projektet är endast en uppskattning och bör endast ses som just en uppskattning. Löpande arbete 750:– /h. Dagar avser endast veckodagar, ej helger och högtider. Estimerad tid är uträknad med “rimlig” svarstid från kund. Den totala tiden påverkas därför av svarstiden från kunden.</p>
+          <h3>Upphovsrätt</h3>
+          <p>Beställaren ger sitt medgivande till att företaget offentliggör att beställaren är kund till företaget vilket innefattar rätt att använda beställares logotyp med tillhörande varumärke samt annan media i form av foto och bilder från tillställningen i syfte att marknadsföra företagets tjänster.</p>
+          <h3>Force majeure</h3>
+          <p>Om prestationen inte kan fullgöras enligt avtalet på grund av omständigheter utanför leverantörens kontroll som denne inte skäligen kunnat förutse då avtalet träffades, utgör detta grund för befrielse från ersättningsskyldighet och andra påföljder. Motsvarande gäller vid förhinder på beställarens sida.</p>
+          <p>Yttre händelser utanför parternas kontroll (t ex myndighetsåtgärder, krig, mobilisering, arbetsmarknadskonflikt, naturkatastrof etc.) och som inte endast är av tillfällig natur och som förhindrar genomförande av uppdraget berättigar vardera parten att helt inställa uppdraget utan rätt till skadestånd för den andra parten.</p>
+          <h3>Tolkning och tvistlösning</h3>
+          <p>Om en av parterna inte fullgör sina skyldigheter enligt avtalet och de villkor som är knutna till den, har den andra parten rätt att säga upp avtalet. Svensk lag ska tillämpas på detta Avtal och på varje annat avtal mellan parterna. Tvist som uppstår i anledning av Avtalet ska avgöras i allmän domstol.</p>
+          <p>Utöver dessa villkor gäller våra allmänna villkor som ni hittar på vår hemsida.</p>
+          <h3>Signera avtalet</h3>
+          <p>ATT SIGNERA AVTALET ÄR JURIDISKT BINDANDE. AVTALET KOMMER ATT SIGNERAS NÄR ALLA PARTER HAR SIGNERAT.</p>
+          <br>
+          <p> Genom att klicka på Signera avtalet bekräftar du följande:<br>
+            • Du har behörighet att signera avtalet på uppdrag av beställaren.<br>
+            • Du har läst och förstått avtalet, och har för avsikt att signera avtalet.
+          </p>
+        </div>
+    </div>
+</div>
   <!-- pre loader -->
   <div id="preloader">
     <div class="wrapper-logo">
@@ -276,6 +441,66 @@
         </div>
       </section>
       <!-- /Om digitaltryck -->
+       <!-- other sections -->
+        <section class="Varför_välja_plastkort">
+          <div class="text">
+            <div class="title">Varför välja plastkort från Plastkort.nu?</div>
+            <h3>
+              <span style="color: rgb(93, 93, 91)">
+                ✔ Högkvalitativt tryck med professionell finish
+                <br>
+                ✔ Modern och beprövad tryckteknik
+                <br>
+                ✔ Transparent prissättning utan dolda avgifter
+              </span>
+            </h3>
+          </div>
+        </section>
+        <!-- other sections -->
+       <!-- banner icons -->
+        <section>
+          <div class="banner">
+           <div class="banner-container">
+               <div class="logo-grid">
+                   <div class="logo-item">
+                       <div class="logo-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                       </div>
+                       <span class="logo-name">Star Brand</span>
+                   </div>
+   
+                   <div class="logo-item">
+                       <div class="logo-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                       </div>
+                       <span class="logo-name">Award Co</span>
+                   </div>
+   
+                   <div class="logo-item">
+                       <div class="logo-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg>
+                       </div>
+                       <span class="logo-name">Shield Inc</span>
+                   </div>
+   
+                   <div class="logo-item">
+                       <div class="logo-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                       </div>
+                       <span class="logo-name">Heart Ltd</span>
+                   </div>
+   
+                   <div class="logo-item">
+                       <div class="logo-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                       </div>
+                       <span class="logo-name">Zap Corp</span>
+                   </div>
+               </div>
+           </div>
+       </div>
+        </section>
+        <!-- /banner icons -->
      <!-- cards -->
       <section class="cards">
         <h1 class="heading text-center mb-0">Exempel på tidigare referensjobb:</h1>
@@ -458,7 +683,7 @@
 
     <!-- footer -->
     <footer class="footer">
-      <p class="text-center">Genom att godkänna dokumentet accepterar du de <a href=""> allmänna villkoren.</a></p>
+      <p class="text-center">Genom att godkänna dokumentet accepterar du de <a data-target="modal1"> allmänna villkoren.</a></p>
     </footer>
     <!-- /footer -->
   </div>

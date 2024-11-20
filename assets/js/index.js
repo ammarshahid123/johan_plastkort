@@ -19,3 +19,36 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function ()
     }
   });
   
+
+
+
+
+
+
+  
+  // Open modal
+  document.querySelectorAll('[data-target]').forEach(button => {
+      button.addEventListener('click', function () {
+          const targetModal = this.getAttribute('data-target');
+          document.getElementById(targetModal + 'Overlay').classList.add('active');
+          document.getElementById(targetModal).classList.add('active');
+      });
+  });
+
+  // Close modal
+  document.querySelectorAll('.close-modal').forEach(button => {
+      button.addEventListener('click', function () {
+          this.closest('.modal-overlay').classList.remove('active');
+          this.closest('.modal').classList.remove('active');
+      });
+  });
+
+  // Close modal by clicking outside the modal
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) {
+              overlay.classList.remove('active');
+              overlay.querySelector('.modal').classList.remove('active');
+          }
+      });
+  });
