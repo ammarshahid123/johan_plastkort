@@ -12,9 +12,6 @@ body, html {
 ::-webkit-scrollbar-thumb{
   background-color: #f37342;
 }
-::-webkit-scrollbar-track{
-}
-
 #preloader {
     position: fixed;
     top: 0;
@@ -30,22 +27,18 @@ body, html {
     opacity: 1;
     transition: opacity 0.5s ease;
 }
-
 #main-content {
     display: none;
     opacity: 0;
     transition: opacity 1s ease;
 }
-
 .container {
     text-align: center;
 }
-
 .show-content #preloader {
     opacity: 0;
     visibility: hidden;
 }
-
 .show-content #main-content {
     display: block;
     opacity: 1;
@@ -59,7 +52,6 @@ body, html {
 .text-center{
     text-align: center;
 }
-
 .printing-dropdown{
   display: flex;
   position: relative;
@@ -516,7 +508,6 @@ align-items: center;
     }
   }
 }
-
 .Varför_välja_plastkort{
   display: flex;
   justify-content: center;
@@ -537,29 +528,7 @@ align-items: center;
     }
   }
 }
-
-// @media (min-width: 768px) {
-//   .logo-grid {
-//       gap: 3rem;
-//   }
-
-//   .logo-icon {
-//       width: 4rem;
-//       height: 4rem;
-//   }
-
-//   .logo-name {
-//       font-size: 1rem;
-//   }
-// }
-
-// @media (min-width: 1024px) {
-//   .logo-grid {
-//       gap: 4rem;
-//   }
-// }
-
-  
+// Responsive
 @media(max-width:768px){
   .cards .cards-container {
     grid-template-columns: auto auto;
@@ -606,6 +575,10 @@ width: 500px;
 @media(max-width:425px){
   .offert-plastkort h1 {
     font-size: 50px !important;
+  }
+  textarea{
+    height: 152px;
+    margin: 10px 0px;
   }
   .pdf_above_description .description {
     width: 370px;
@@ -746,6 +719,11 @@ width: 330px;
 @media(max-width:320px){
   .offert-plastkort h1 {
     font-size: 35px !important;
+}
+textarea{
+  height: 152px;
+  width: 258px !important;
+  margin: 10px 0px;
 }
   .wrapper-logo{
     width: 250px;

@@ -290,6 +290,31 @@
         </div>
     </div>
 </div>
+<!-- /modal 1 -->
+  <!-- Modal 2 -->
+  <div class="modal-overlay" id="modal2Overlay">
+    <div class="modal" id="modal2">
+        <a class="close-modal">
+            <svg viewBox="0 0 20 20" fill="#000" width="20px" height="20px">
+                <path d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+            </svg>
+        </a>
+        <div class="modal-content">
+          <div class="inner-document">
+            <h3 class="text-center">Neka dokumentet</h3>
+            <p class="text-center">För att neka dokumentet var god och bekräfta genom att klicka på knappen nedanför.</p>
+            <label for="">Kommentar (valfritt)</label><br>
+            <textarea style="width: 98%; margin: 10px 0px;" name="" id="" cols="auto" rows="15"></textarea><br>
+            <div class="button" style="display: flex;justify-content: center;">
+              <button style="color:white;font-size: 15px;padding: 22px 36px;border-radius: 8px;box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.1) 0px 3px 6px -1px;background-image: linear-gradient(185deg, rgba(61, 58, 58, 0.705), rgba(0, 0, 0, 0.575));cursor:pointer;
+              border: none;" class="btn btn-decline">Neka</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<!-- /modal 2 -->
+
   <!-- pre loader -->
   <div id="preloader">
     <div class="wrapper-logo">
@@ -379,7 +404,7 @@
         <p>Vänliga hälsningar,</p>
         <p class="mt-0">Johan Lindberg</p>
         <div class="buttons">
-        <button type="button" class="btn-neka">
+        <button type="button" class="btn-neka" data-target="modal2">
           <span> Neka </span>
         </button>
         <button type="button" class="btn-signera">
