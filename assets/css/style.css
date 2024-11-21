@@ -271,7 +271,6 @@ body, html {
 }
 
 .container {
-  padding: 20px;
   text-align: center;
 }
 
@@ -406,11 +405,17 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.signature .text {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  width: 500px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -418,17 +423,15 @@ body, html {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.signature p {
+.signature .text p {
   text-align: left;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  width: 630px;
   margin-bottom: 0px;
   line-height: 1.5;
   color: #3c3c3c;
 }
-
-.buttons {
+.signature .text .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,7 +443,7 @@ body, html {
           align-items: center;
   margin: 40px 0px;
 }
-.buttons .btn-neka {
+.signature .text .buttons .btn-neka {
   margin-left: 1em;
   border: none;
   border-radius: 10px;
@@ -459,10 +462,10 @@ body, html {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.buttons .btn-neka:hover {
+.signature .text .buttons .btn-neka:hover {
   background-color: #f3f4f6;
 }
-.buttons .btn-signera {
+.signature .text .buttons .btn-signera {
   margin-left: 1em;
   border: none;
   border-radius: 10px;
@@ -479,7 +482,7 @@ body, html {
   padding: 15px 25px 15px 25px;
   background: #2cc01b;
 }
-.buttons .btn-signera i {
+.signature .text .buttons .btn-signera i {
   font-size: 25px;
   margin-top: -5px;
 }
@@ -891,20 +894,238 @@ body, html {
   line-height: 1.9;
 }
 
-@media (min-width: 768px) {
-  .logo-grid {
-    gap: 3rem;
+@media (max-width: 768px) {
+  .cards .cards-container {
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
   }
-  .logo-icon {
-    width: 4rem;
-    height: 4rem;
-  }
-  .logo-name {
-    font-size: 1rem;
+  .wrapper-logo {
+    width: 320px;
   }
 }
-@media (min-width: 1024px) {
-  .logo-grid {
-    gap: 4rem;
+@media (max-width: 576px) {
+  .pdf_above_description .description {
+    width: 500px;
+  }
+  .parter .inner-txt {
+    width: 500px;
+  }
+  .signature .text {
+    width: 500px;
+  }
+  .content h1 {
+    font-size: 2.7rem !important;
+  }
+  .cards .cards-container {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+  .Varför_välja_plastkort .text {
+    width: 500px;
+  }
+  .banner {
+    width: 93%;
+  }
+  .Om_digitaltryck .text {
+    width: 500px;
+  }
+  .Plastkort_med_digitaltryck .text {
+    width: 500px;
+  }
+  .stripped-table .text {
+    width: 500px;
+  }
+  .grey-table .text {
+    width: 500px;
+  }
+}
+@media (max-width: 425px) {
+  .offert-plastkort h1 {
+    font-size: 50px !important;
+  }
+  .pdf_above_description .description {
+    width: 370px;
+  }
+  .parter .inner-txt {
+    width: 370px;
+  }
+  .signature .text {
+    width: 370px;
+  }
+  .content h1 {
+    font-size: 2.7rem !important;
+  }
+  .cards .cards-container {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+  .Varför_välja_plastkort .text {
+    width: 370px;
+  }
+  .banner {
+    width: 93%;
+  }
+  .cards .subtitle {
+    margin: 0px 15px;
+  }
+  .Om_digitaltryck .text {
+    width: 370px;
+  }
+  .Plastkort_med_digitaltryck .text {
+    width: 370px;
+  }
+  .stripped-table .text {
+    width: 370px;
+  }
+  .grey-table .text {
+    width: 370px;
+  }
+}
+@media (max-width: 375px) {
+  .offert-plastkort h1 {
+    font-size: 40px !important;
+  }
+  .pdf_above_description .description {
+    width: 330px;
+  }
+  .parter .inner-txt {
+    width: 330px;
+  }
+  .cards .heading {
+    font-size: 2.1rem;
+  }
+  .signature .text {
+    width: 330px;
+  }
+  .content h1 {
+    font-size: 2.7rem !important;
+  }
+  .cards .cards-container {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+  .Varför_välja_plastkort .text {
+    width: 330px;
+  }
+  .banner {
+    width: 93%;
+  }
+  .banner .banner-container .logo-grid {
+    gap: 0.5rem;
+  }
+  .cards .subtitle {
+    margin: 0px 15px;
+  }
+  .Om_digitaltryck .text {
+    width: 330px;
+  }
+  .Plastkort_med_digitaltryck .text {
+    width: 330px;
+  }
+  .stripped-table .text {
+    width: 330px;
+  }
+  .grey-table .text {
+    width: 330px;
+  }
+}
+@media (max-width: 340px) {
+  .pdf_above_description .description {
+    width: 300px;
+  }
+  .parter .inner-txt {
+    width: 300px;
+  }
+  .cards .heading {
+    font-size: 2rem;
+  }
+  .signature .text {
+    width: 300px;
+  }
+  .content h1 {
+    font-size: 2.7rem !important;
+  }
+  .cards .cards-container {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+  .Varför_välja_plastkort .text {
+    width: 300px;
+  }
+  .banner {
+    width: 90%;
+  }
+  .banner .banner-container .logo-grid {
+    gap: 1.5rem;
+  }
+  .banner .banner-container .logo-grid .logo-item {
+    width: 64px;
+  }
+  .banner .banner-container .logo-grid .logo-item .logo-icon {
+    width: 2.9rem;
+  }
+  .cards .subtitle {
+    margin: 0px 15px;
+  }
+  .Om_digitaltryck .text {
+    width: 300px;
+  }
+  .Plastkort_med_digitaltryck .text {
+    width: 300px;
+  }
+  .stripped-table .text {
+    width: 300px;
+  }
+  .grey-table .text {
+    width: 300px;
+  }
+}
+@media (max-width: 320px) {
+  .offert-plastkort h1 {
+    font-size: 35px !important;
+  }
+  .wrapper-logo {
+    width: 250px;
+  }
+  .pdf_above_description .description {
+    width: 280px;
+  }
+  .parter .inner-txt {
+    width: 280px;
+  }
+  .cards .heading {
+    font-size: 1.8rem;
+  }
+  .signature .text {
+    width: 280px;
+  }
+  .content h1 {
+    font-size: 2.7rem !important;
+  }
+  .cards .cards-container .card .card-img img {
+    width: 300px;
+    height: 300px;
+  }
+  .cards .cards-container {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+  .Varför_välja_plastkort .text {
+    width: 280px;
+  }
+  .cards .subtitle {
+    margin: 0px 15px;
+  }
+  .Om_digitaltryck .text {
+    width: 280px;
+  }
+  .Plastkort_med_digitaltryck .text {
+    width: 280px;
+  }
+  .stripped-table .text {
+    width: 280px;
+  }
+  .grey-table .text {
+    width: 280px;
   }
 }

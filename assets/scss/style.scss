@@ -38,7 +38,6 @@ body, html {
 }
 
 .container {
-    padding: 20px;
     text-align: center;
 }
 
@@ -155,60 +154,63 @@ body, html {
 }
 .signature{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
     justify-content: center;
-    p{
-        text-align: left;
-        font-family: "Inter", sans-serif;
-        font-size: 16px;
-        width: 630px;
-        margin-bottom: 0px;
-        line-height: 1.5;
-        color: #3c3c3c;
-    }
-}
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0px;
-    .btn-neka{
-      margin-left: 1em;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      color: #39424e;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
+    .text{
+      flex-direction: column;
       gap: 10px;
-      padding:15px 25px 15px 25px;
-      background: transparent;
-      transition: all 0.2s ease-in-out;
-      &:hover{
-        background-color: #f3f4f6;
-
+      width: 500px;
+      align-items: center;
+      justify-content: center;
+      p{
+          text-align: left;
+          font-family: "Inter", sans-serif;
+          font-size: 16px;
+          margin-bottom: 0px;
+          line-height: 1.5;
+          color: #3c3c3c;
+      }
+      .buttons{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 40px 0px;
+          .btn-neka{
+            margin-left: 1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #39424e;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding:15px 25px 15px 25px;
+            background: transparent;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+              background-color: #f3f4f6;
+      
+            }
+          }
+        .btn-signera{
+          margin-left: 1em;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          color: white;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding:15px 25px 15px 25px;
+          background: #2cc01b;
+          i{
+            font-size: 25px;
+            margin-top: -5px;
+          }
+        }
       }
     }
-  .btn-signera{
-    margin-left: 1em;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding:15px 25px 15px 25px;
-    background: #2cc01b;
-    i{
-      font-size: 25px;
-      margin-top: -5px;
-    }
-  }
 }
 .Plastkort_med_digitaltryck{
   display: flex;
@@ -536,25 +538,257 @@ align-items: center;
   }
 }
 
-@media (min-width: 768px) {
-  .logo-grid {
-      gap: 3rem;
-  }
+// @media (min-width: 768px) {
+//   .logo-grid {
+//       gap: 3rem;
+//   }
 
-  .logo-icon {
-      width: 4rem;
-      height: 4rem;
-  }
+//   .logo-icon {
+//       width: 4rem;
+//       height: 4rem;
+//   }
 
-  .logo-name {
-      font-size: 1rem;
-  }
-}
+//   .logo-name {
+//       font-size: 1rem;
+//   }
+// }
 
-@media (min-width: 1024px) {
-  .logo-grid {
-      gap: 4rem;
-  }
-}
+// @media (min-width: 1024px) {
+//   .logo-grid {
+//       gap: 4rem;
+//   }
+// }
 
   
+@media(max-width:768px){
+  .cards .cards-container {
+    grid-template-columns: auto auto;
+  }
+  .wrapper-logo{
+    width: 320px;
+  }
+}
+@media(max-width:576px){
+  .pdf_above_description .description {
+    width: 500px;
+  }
+  .parter .inner-txt {
+    width: 500px;
+  }
+  .signature .text {
+    width: 500px;
+  }
+  .content h1 {
+    font-size: 2.7rem !important;
+  }
+  .cards .cards-container {
+    grid-template-columns: auto;
+}
+.Varför_välja_plastkort .text {
+  width: 500px;
+}
+.banner {
+  width: 93%;
+}
+.Om_digitaltryck .text {
+  width: 500px;
+}
+.Plastkort_med_digitaltryck .text {
+  width: 500px;
+}
+.stripped-table .text {
+  width: 500px;
+}
+.grey-table .text {
+width: 500px;
+}
+}
+@media(max-width:425px){
+  .offert-plastkort h1 {
+    font-size: 50px !important;
+  }
+  .pdf_above_description .description {
+    width: 370px;
+  }
+  .parter .inner-txt {
+    width: 370px;
+  }
+  .signature .text {
+    width: 370px;
+  }
+  .content h1 {
+    font-size: 2.7rem !important;
+  }
+  .cards .cards-container {
+    grid-template-columns: auto;
+}
+.Varför_välja_plastkort .text {
+  width: 370px;
+}
+.banner {
+  width: 93%;
+}
+.cards .subtitle {
+  margin: 0px 15px;
+}
+.Om_digitaltryck .text {
+  width: 370px;
+}
+.Plastkort_med_digitaltryck .text {
+  width: 370px;
+}
+.stripped-table .text {
+  width: 370px;
+}
+.grey-table .text {
+width: 370px;
+}
+}
+@media(max-width:375px){
+  .offert-plastkort h1 {
+    font-size: 40px !important;
+}
+.pdf_above_description .description {
+  width: 330px;
+}
+.parter .inner-txt {
+  width: 330px;
+}
+.cards .heading {
+  font-size: 2.1rem;
+}
+.signature .text {
+  width: 330px;
+}
+.content h1 {
+  font-size: 2.7rem !important;
+}
+.cards .cards-container {
+  grid-template-columns: auto;
+}
+.Varför_välja_plastkort .text {
+width: 330px;
+}
+.banner {
+width: 93%;
+}
+
+.banner .banner-container .logo-grid {
+  gap:0.5rem;
+}
+.cards .subtitle {
+margin: 0px 15px;
+}
+.Om_digitaltryck .text {
+width: 330px;
+}
+.Plastkort_med_digitaltryck .text {
+width: 330px;
+}
+.stripped-table .text {
+width: 330px;
+}
+.grey-table .text {
+width: 330px;
+}
+}
+@media(max-width:340px){
+  .pdf_above_description .description {
+    width: 300px;
+  }
+  .parter .inner-txt {
+    width: 300px;
+  }
+  .cards .heading {
+    font-size: 2rem;
+  }
+  .signature .text {
+    width: 300px;
+  }
+  .content h1 {
+    font-size: 2.7rem !important;
+  }
+  .cards .cards-container {
+    grid-template-columns: auto;
+  }
+  .Varför_välja_plastkort .text {
+  width: 300px;
+  }
+  .banner {
+  width: 90%;
+  }
+  
+  .banner .banner-container .logo-grid {
+    gap:1.5rem;
+  }
+  .banner .banner-container .logo-grid .logo-item{
+    width: 64px;
+  }
+  .banner .banner-container .logo-grid .logo-item .logo-icon{
+    width: 2.9rem;
+  }
+  .cards .subtitle {
+  margin: 0px 15px;
+  }
+  .Om_digitaltryck .text {
+  width: 300px;
+  }
+  .Plastkort_med_digitaltryck .text {
+  width: 300px;
+  }
+  .stripped-table .text {
+  width: 300px;
+  }
+  .grey-table .text {
+  width: 300px;
+  }
+}
+@media(max-width:320px){
+  .offert-plastkort h1 {
+    font-size: 35px !important;
+}
+  .wrapper-logo{
+    width: 250px;
+  }
+
+.pdf_above_description .description {
+  width: 280px;
+}
+.parter .inner-txt {
+  width: 280px;
+}
+.cards .heading {
+  font-size: 1.8rem;
+}
+.signature .text {
+  width: 280px;
+}
+.content h1 {
+  font-size: 2.7rem !important;
+}
+.cards .cards-container .card .card-img img {
+  width: 300px;
+  height: 300px;
+}
+.cards .cards-container {
+  grid-template-columns: auto;
+}
+.Varför_välja_plastkort .text {
+width: 280px;
+}
+.cards .subtitle {
+margin: 0px 15px;
+}
+.Om_digitaltryck .text {
+width: 280px;
+}
+.Plastkort_med_digitaltryck .text {
+width: 280px;
+}
+.stripped-table .text {
+width: 280px;
+}
+.grey-table .text {
+width: 280px;
+}
+}
