@@ -18,14 +18,7 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function ()
       dropdown.classList.remove('active');
     }
   });
-  
-
-
-
-
-
-
-  
+    
   // Open modal
   document.querySelectorAll('[data-target]').forEach(button => {
       button.addEventListener('click', function () {
