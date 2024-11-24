@@ -16,6 +16,204 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <style>
+.Avböj_offert{
+  margin-bottom: 100px;
+  .card {
+              background: white;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+              max-width: 630px;
+              margin: 0 auto;
+              padding: 20px;
+          }
+  
+          .card-header {
+              margin-bottom: 20px;
+          }
+  
+          .card-header h2 {
+              font-size: 24px;
+              color: #333;
+              margin-bottom: 8px;
+          }
+  
+          .card-header p {
+              color: #666;
+          }
+  
+          .reasons-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 12px;
+              margin-bottom: 20px;
+          }
+  
+          .reason-button {
+              background: white;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+              padding: 12px 16px;
+              text-align: left;
+              cursor: pointer;
+              transition: all 0.2s;
+              font-size: 14px;
+              color: #333;
+          }
+  
+          .reason-button:hover {
+              background: #f5f5f5;
+          }
+  
+          .reason-button.selected {
+              background: #2563eb;
+              color: white;
+              border-color: #2563eb;
+          }
+  
+          .confirmation {
+              display: none;
+              margin-top: 20px;
+          }
+  
+          .confirmation.show {
+              display: block;
+          }
+  
+          .alert {
+              background: #f8f9fa;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+              padding: 12px 16px;
+              margin-bottom: 16px;
+          }
+  
+          .button-group {
+              display: flex;
+              gap: 12px;
+          }
+  
+          .btn {
+              padding: 8px 16px;
+              border-radius: 6px;
+              cursor: pointer;
+              font-size: 14px;
+              border: 1px solid transparent;
+          }
+  
+          .btn-confirm {
+              background: #dc2626;
+              color: white;
+              border-color: #dc2626;
+          }
+  
+          .btn-confirm:hover {
+              background: #b91c1c;
+          }
+  
+          .btn-cancel {
+              background: white;
+              border-color: #ddd;
+              color: #333;
+          }
+  
+          .btn-cancel:hover {
+              background: #f5f5f5;
+          }
+}
+
+.faqs{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  .faq-container {
+    max-width: 630px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.faq-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.accordion {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border: 1px solid #e5e7eb;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    background: white;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.accordion-button:hover {
+    background-color: #f9fafb;
+}
+
+.accordion-button::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
+}
+
+.accordion-button.active::after {
+    transform: rotate(-135deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: white;
+}
+
+.accordion-content-inner {
+    padding: 0 1rem 1rem 1rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+    .faq-container {
+        margin: 1rem;
+    }
+    
+    .accordion-button {
+        font-size: 0.95rem;
+        padding: 0.875rem;
+    }
+    
+    .accordion-content-inner {
+        font-size: 0.9rem;
+  }
+}
+}
+
+
+
  
 @media only screen and (min-width: 40em) {
   .modal-overlay {
@@ -501,6 +699,33 @@
         </div>
       </section>
       <!-- /Om digitaltryck -->
+       <!-- Avböj_offert -->
+       <section class="Avböj_offert">
+        <div class="card">
+          <div class="card-header">
+              <h2>Avböj offert</h2>
+              <p>Välj en anledning till varför du vill avböja offerten</p>
+          </div>
+          
+          <div class="reasons-grid" id="reasonsGrid"></div>
+  
+          <div class="confirmation" id="confirmation">
+              <div class="alert">
+                  Du har valt anledningen: "<span id="selectedReasonText"></span>"
+              </div>
+              <div class="button-group">
+                  <button class="btn btn-confirm" id="confirmBtn">
+                      Bekräfta avböjande
+                  </button>
+                  <button class="btn btn-cancel" id="cancelBtn">
+                      Avbryt
+                  </button>
+              </div>
+          </div>
+      </div>
+  
+       </section>
+       <!--  /Avböj_offert-->
        <!-- other sections -->
         <section class="Varför_välja_plastkort">
           <div class="text">
@@ -697,6 +922,58 @@
       <br>
       <br>
      <!-- /Parter section -->
+      <!-- faqs -->
+       <section class="faqs">
+        <div class="faq-container">
+          <h2 class="faq-title">Vanliga frågor om digitaltryckta plastkort</h2>
+          <div class="accordion">
+              <div class="accordion-item">
+                  <button class="accordion-button">
+                      Vad är skillnaden mellan digitaltryck och offsettryck på plastkort?
+                  </button>
+                  <div class="accordion-content">
+                      <div class="accordion-content-inner">
+                          Digitaltryck är idealiskt för mindre upplagor och kort där varje kort kan ha unik information eller design. Det ger utmärkt färgåtergivning och är kostnadseffektivt för mindre serier. Offsettryck används främst vid större upplagor och ger mycket hög kvalitet men kräver större minimivolymer.
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="accordion-item">
+                  <button class="accordion-button">
+                      Vilka material och format kan ni erbjuda för plastkorten?
+                  </button>
+                  <div class="accordion-content">
+                      <div class="accordion-content-inner">
+                          Vi erbjuder standardformatet CR80 (85,6 x 54 mm) vilket är samma som ett vanligt betalkort. Materialet är PVC som standard, men vi kan även erbjuda miljövänligare alternativ som biologiskt nedbrytbar PLA eller återvunnen PVC. Tjockleken kan vara 0,76 mm eller 0,84 mm beroende på användningsområde.
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="accordion-item">
+                  <button class="accordion-button">
+                      Hur lång är leveranstiden för digitaltryckta plastkort?
+                  </button>
+                  <div class="accordion-content">
+                      <div class="accordion-content-inner">
+                          Normal leveranstid för digitaltryckta plastkort är 5-7 arbetsdagar från godkänt korrektur. Vid brådskande behov kan vi erbjuda expressleverans med 2-3 arbetsdagars leveranstid mot ett pristillägg. Större upplagor kan kräva längre produktionstid.
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="accordion-item">
+                  <button class="accordion-button">
+                      Kan ni lägga till magnetremsa eller chip på digitaltryckta kort?
+                  </button>
+                  <div class="accordion-content">
+                      <div class="accordion-content-inner">
+                          Ja, vi kan förse digitaltryckta kort med både magnetremsa (HiCo eller LoCo) och olika typer av chip (kontakt eller kontaktlöst). Vi kan även erbjuda QR-koder, streckkoder och serialisering. Notera att detta kan påverka både leveranstid och minimumkvantitet.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+       </section>
+      <!-- /faqs -->
      <!-- description above pdf -->
       <section class="pdf_above_description">
         <div class="description">
@@ -761,6 +1038,96 @@
     <!-- /footer -->
   </div>
 <script src="./assets/js/index.js"></script>
+<script>
+  const reasons = [
+      "Priset är för högt",
+      "Vi har valt en annan leverantör",
+      "Tidpunkten passar inte just nu",
+      "Budgeten finns inte längre",
+      "Behovet har ändrats/finns inte längre",
+      "Specifikationerna matchar inte våra behov",
+      "Vi vill omförhandla villkoren",
+      "Projektet är pausat/uppskjutet",
+      "Intern omorganisation/förändring",
+      "Vi löser det internt istället"
+  ];
+
+  let selectedReason = '';
+
+  // Create reason buttons
+  const reasonsGrid = document.getElementById('reasonsGrid');
+  reasons.forEach(reason => {
+      const button = document.createElement('button');
+      button.className = 'reason-button';
+      button.textContent = reason;
+      button.onclick = () => handleReasonSelect(reason, button);
+      reasonsGrid.appendChild(button);
+  });
+
+  // Handle reason selection
+  function handleReasonSelect(reason, selectedButton) {
+      // Reset all buttons
+      document.querySelectorAll('.reason-button').forEach(btn => {
+          btn.classList.remove('selected');
+      });
+      
+      // Select new button
+      selectedButton.classList.add('selected');
+      selectedReason = reason;
+      
+      // Show confirmation
+      document.getElementById('selectedReasonText').textContent = reason;
+      document.getElementById('confirmation').classList.add('show');
+  }
+
+  // Handle confirmation
+  document.getElementById('confirmBtn').onclick = () => {
+      // Här kan du lägga till din logik för att hantera avböjandet
+      console.log('Offert avböjd med anledning:', selectedReason);
+      alert('Offerten har avböjts');
+      resetSelection();
+  };
+
+  // Handle cancellation
+  document.getElementById('cancelBtn').onclick = resetSelection;
+
+  function resetSelection() {
+      selectedReason = '';
+      document.querySelectorAll('.reason-button').forEach(btn => {
+          btn.classList.remove('selected');
+      });
+      document.getElementById('confirmation').classList.remove('show');
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+const accordionButtons = document.querySelectorAll('.accordion-button');
+
+accordionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const isActive = this.classList.contains('active');
+        
+        // Stäng alla andra accordion items
+        accordionButtons.forEach(otherButton => {
+            if (otherButton !== this) {
+                otherButton.classList.remove('active');
+                otherButton.nextElementSibling.style.maxHeight = '0';
+            }
+        });
+        
+        // Toggla current accordion item
+        this.classList.toggle('active');
+        
+        if (!isActive) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = '0';
+        }
+   });
+});
+});
+</script>
 </body>
 
 </html>
