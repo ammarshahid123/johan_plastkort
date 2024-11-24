@@ -204,12 +204,17 @@
 
   /* Background video styling */
   .background-video {
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    z-index: -2;
     /* Behind everything */
+  position: absolute;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  object-fit: cover;
+  pointer-events: none;
+
   }
 
   /* Gradient overlay */
@@ -585,10 +590,24 @@
     <!-- video section -->
     <section class="video-section">
       <!-- Background video -->
-      <video autoplay muted playsinline loop class="background-video" preload="auto">
+      <video 
+      autoplay 
+      muted 
+      playsinline 
+      loop 
+      class="background-video" 
+      preload="auto"
+      disablePictureInPicture
+      controlsList="nodownload noplaybackrate"
+    >
+      <source src="./assets/images/video.mp4" type="video/mp4">
+      <source src="./assets/images/video.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+      <!-- <video autoplay muted playsinline loop class="background-video" preload="auto">
         <source src="./assets/images/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video>
+      </video> -->
       <!-- Gradient overlay -->
       <div class="overlay"></div>
       <!-- Centered text -->
