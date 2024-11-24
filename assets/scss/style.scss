@@ -150,7 +150,8 @@ body, html {
     .text{
       flex-direction: column;
       gap: 10px;
-      width: 630px;
+      max-width: 630px;
+      width:630px;
       align-items: center;
       justify-content: center;
       p{
@@ -209,7 +210,8 @@ body, html {
   display: flex;
   justify-content: center;
   .text{
-    width: 630px;
+    max-width: 630px;
+    width:630px;
     p{
       font-size: 16px;
       line-height: 1.5;
@@ -225,7 +227,8 @@ body, html {
   margin: 40px 0px;
   justify-content: center;
   .text{
-    width: 630px;
+    max-width: 630px;
+    width:630px;
     .title {
       display: flex;
       font-weight: 500;
@@ -264,7 +267,8 @@ body, html {
   margin-bottom: 100px;
   justify-content: center;
   .text{
-    width: 630px;
+    max-width: 630px;
+    width:630px;
     .title {
       display: flex;
       font-size: 16px;
@@ -305,7 +309,8 @@ body, html {
   display: flex;
   justify-content: center;
   .text{
-    width: 630px;
+    max-width: 630px;
+    width:630px;
     h2{
       font-family: Inter;
       font-size: 36px;
@@ -368,7 +373,8 @@ body, html {
   display: flex;
   justify-content: center;
   .inner-txt{
-    width: 630px;
+    max-width: 630px;
+    width:630px;
     .title{
       font-size: 24px;
       font-weight: 700;
@@ -450,7 +456,8 @@ margin: 30px 0px;
 justify-content: center;
 align-items: center;
   .description{
-    width: 630px;
+    max-width: 630px;
+    width:630px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -514,7 +521,8 @@ align-items: center;
   justify-content: center;
   margin-bottom: 30px;
   .text{
-    width: 630px;
+    max-width: 630px;
+    width:630px;
     .title{
           font-size: 24px;
           font-weight: 700;
@@ -540,13 +548,13 @@ align-items: center;
 }
 @media(max-width:576px){
   .pdf_above_description .description {
-    width: 500px;
+    max-width: 500px;
   }
   .parter .inner-txt {
-    width: 500px;
+    max-width: 500px;
   }
   .signature .text {
-    width: 500px;
+    max-width: 500px;
   }
   .content h1 {
     font-size: 2.7rem !important;
@@ -555,35 +563,35 @@ align-items: center;
     grid-template-columns: auto;
 }
 .Varför_välja_plastkort .text {
-  width: 500px;
+  max-width: 500px;
 }
 .banner {
   width: 93%;
 }
 .Om_digitaltryck .text {
-  width: 500px;
+  max-width: 500px;
 }
 .Plastkort_med_digitaltryck .text {
-  width: 500px;
+  max-width: 500px;
 }
 .stripped-table .text {
-  width: 500px;
+  max-width: 500px;
 }
 .grey-table .text {
-width: 500px;
+max-width: 500px;
 }
 }
 @media(max-width:500px){
   .pdf_above_description .description {
-    width: 370px;
+    max-width: 370px;
   }
   
   .parter .inner-txt {
-    width: 370px;
+    max-width: 370px;
   }
   
   .signature .text {
-    width: 370px;
+    max-width: 370px;
   }
   
   .content h1 {
@@ -593,7 +601,7 @@ width: 500px;
     grid-template-columns: auto;
 }
 .Varför_välja_plastkort .text {
-  width: 370px;
+  max-width: 370px;
 }
 .offert-plastkort h1 {
   font-size: 50px;
@@ -602,19 +610,19 @@ width: 500px;
   width: 93%;
 }
 .Om_digitaltryck .text {
-  width: 370px;
+  max-width: 370px;
 }
 
 .Plastkort_med_digitaltryck .text {
-  width: 370px;
+  max-width: 370px;
 }
 
 .stripped-table .text {
-  width: 370px;
+  max-width: 370px;
 }
 
 .grey-table .text {
-width: 370px;
+max-width: 370px;
 }
 
 }

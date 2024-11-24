@@ -415,6 +415,7 @@ body, html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  max-width: 630px;
   width: 630px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -496,6 +497,7 @@ body, html {
           justify-content: center;
 }
 .Plastkort_med_digitaltryck .text {
+  max-width: 630px;
   width: 630px;
 }
 .Plastkort_med_digitaltryck .text p {
@@ -517,6 +519,7 @@ body, html {
           justify-content: center;
 }
 .stripped-table .text {
+  max-width: 630px;
   width: 630px;
 }
 .stripped-table .text .title {
@@ -564,6 +567,7 @@ body, html {
           justify-content: center;
 }
 .grey-table .text {
+  max-width: 630px;
   width: 630px;
 }
 .grey-table .text .title {
@@ -615,6 +619,7 @@ body, html {
           justify-content: center;
 }
 .Om_digitaltryck .text {
+  max-width: 630px;
   width: 630px;
 }
 .Om_digitaltryck .text h2 {
@@ -693,6 +698,7 @@ body, html {
           justify-content: center;
 }
 .parter .inner-txt {
+  max-width: 630px;
   width: 630px;
 }
 .parter .inner-txt .title {
@@ -786,6 +792,7 @@ body, html {
           align-items: center;
 }
 .pdf_above_description .description {
+  max-width: 630px;
   width: 630px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -881,6 +888,7 @@ body, html {
   margin-bottom: 30px;
 }
 .Varför_välja_plastkort .text {
+  max-width: 630px;
   width: 630px;
 }
 .Varför_välja_plastkort .text .title {
@@ -905,13 +913,13 @@ body, html {
 }
 @media (max-width: 576px) {
   .pdf_above_description .description {
-    width: 500px;
+    max-width: 500px;
   }
   .parter .inner-txt {
-    width: 500px;
+    max-width: 500px;
   }
   .signature .text {
-    width: 500px;
+    max-width: 500px;
   }
   .content h1 {
     font-size: 2.7rem !important;
@@ -921,33 +929,33 @@ body, html {
     grid-template-columns: auto;
   }
   .Varför_välja_plastkort .text {
-    width: 500px;
+    max-width: 500px;
   }
   .banner {
     width: 93%;
   }
   .Om_digitaltryck .text {
-    width: 500px;
+    max-width: 500px;
   }
   .Plastkort_med_digitaltryck .text {
-    width: 500px;
+    max-width: 500px;
   }
   .stripped-table .text {
-    width: 500px;
+    max-width: 500px;
   }
   .grey-table .text {
-    width: 500px;
+    max-width: 500px;
   }
 }
 @media (max-width: 500px) {
   .pdf_above_description .description {
-    width: 370px;
+    max-width: 370px;
   }
   .parter .inner-txt {
-    width: 370px;
+    max-width: 370px;
   }
   .signature .text {
-    width: 370px;
+    max-width: 370px;
   }
   .content h1 {
     font-size: 2rem !important;
@@ -957,7 +965,7 @@ body, html {
     grid-template-columns: auto;
   }
   .Varför_välja_plastkort .text {
-    width: 370px;
+    max-width: 370px;
   }
   .offert-plastkort h1 {
     font-size: 50px;
@@ -966,16 +974,16 @@ body, html {
     width: 93%;
   }
   .Om_digitaltryck .text {
-    width: 370px;
+    max-width: 370px;
   }
   .Plastkort_med_digitaltryck .text {
-    width: 370px;
+    max-width: 370px;
   }
   .stripped-table .text {
-    width: 370px;
+    max-width: 370px;
   }
   .grey-table .text {
-    width: 370px;
+    max-width: 370px;
   }
 }
 @media (max-width: 430px) {
