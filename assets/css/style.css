@@ -941,13 +941,13 @@ body, html {
 }
 @media (max-width: 500px) {
   .pdf_above_description .description {
-    width: 450px;
+    width: 370px;
   }
   .parter .inner-txt {
-    width: 450px;
+    width: 370px;
   }
   .signature .text {
-    width: 450px;
+    width: 370px;
   }
   .content h1 {
     font-size: 2rem !important;
@@ -957,7 +957,7 @@ body, html {
     grid-template-columns: auto;
   }
   .Varför_välja_plastkort .text {
-    width: 450px;
+    width: 370px;
   }
   .offert-plastkort h1 {
     font-size: 50px;
@@ -966,16 +966,16 @@ body, html {
     width: 93%;
   }
   .Om_digitaltryck .text {
-    width: 450px;
+    width: 370px;
   }
   .Plastkort_med_digitaltryck .text {
-    width: 450px;
+    width: 370px;
   }
   .stripped-table .text {
-    width: 450px;
+    width: 370px;
   }
   .grey-table .text {
-    width: 450px;
+    width: 370px;
   }
 }
 @media (max-width: 430px) {
