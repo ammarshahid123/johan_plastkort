@@ -573,6 +573,51 @@ align-items: center;
 width: 500px;
 }
 }
+@media(max-width:500px){
+  .pdf_above_description .description {
+    width: 450px;
+  }
+  
+  .parter .inner-txt {
+    width: 450px;
+  }
+  
+  .signature .text {
+    width: 450px;
+  }
+  
+  .content h1 {
+    font-size: 2rem !important;
+  }
+  .cards .cards-container {
+    grid-template-columns: auto;
+}
+.Varför_välja_plastkort .text {
+  width: 450px;
+}
+.offert-plastkort h1 {
+  font-size: 50px;
+}
+.banner {
+  width: 93%;
+}
+.Om_digitaltryck .text {
+  width: 450px;
+}
+
+.Plastkort_med_digitaltryck .text {
+  width: 450px;
+}
+
+.stripped-table .text {
+  width: 450px;
+}
+
+.grey-table .text {
+width: 450px;
+}
+
+}
 @media(max-width:425px){
   .offert-plastkort h1 {
     font-size: 50px !important;
