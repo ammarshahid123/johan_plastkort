@@ -504,14 +504,30 @@
         </a>
         <div class="modal-content">
           <div class="inner-document">
-            <h3 class="text-center">Neka dokumentet</h3>
-            <p class="text-center">För att neka dokumentet var god och bekräfta genom att klicka på knappen nedanför.</p>
-            <label for="">Kommentar (valfritt)</label><br>
-            <textarea style="width: 98%; margin: 10px 0px;" name="" id="" cols="auto" rows="15"></textarea><br>
-            <div class="button" style="display: flex;justify-content: center;">
-              <button style="color:white;font-size: 15px;padding: 22px 36px;border-radius: 8px;box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.1) 0px 3px 6px -1px;background-image: linear-gradient(185deg, rgba(61, 58, 58, 0.705), rgba(0, 0, 0, 0.575));cursor:pointer;
-              border: none;" class="btn btn-decline">Neka</button>
+            <section class="Avböj_offert">
+              <div class="card">
+                <div class="card-header">
+                    <h2>Avböj offert</h2>
+                    <p>Välj en anledning till varför du vill avböja offerten</p>
+                </div>
+                
+                <div class="reasons-grid" id="reasonsGrid"></div>
+        
+                <div class="confirmation" id="confirmation">
+                    <div class="alert">
+                        Du har valt anledningen: "<span id="selectedReasonText"></span>"
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-confirm" id="confirmBtn">
+                            Bekräfta avböjande
+                        </button>
+                        <button class="btn btn-cancel" id="cancelBtn">
+                            Avbryt
+                        </button>
+                    </div>
+                </div>
             </div>
+             </section>
           </div>
         </div>
     </div>
@@ -699,33 +715,6 @@
         </div>
       </section>
       <!-- /Om digitaltryck -->
-       <!-- Avböj_offert -->
-       <section class="Avböj_offert">
-        <div class="card">
-          <div class="card-header">
-              <h2>Avböj offert</h2>
-              <p>Välj en anledning till varför du vill avböja offerten</p>
-          </div>
-          
-          <div class="reasons-grid" id="reasonsGrid"></div>
-  
-          <div class="confirmation" id="confirmation">
-              <div class="alert">
-                  Du har valt anledningen: "<span id="selectedReasonText"></span>"
-              </div>
-              <div class="button-group">
-                  <button class="btn btn-confirm" id="confirmBtn">
-                      Bekräfta avböjande
-                  </button>
-                  <button class="btn btn-cancel" id="cancelBtn">
-                      Avbryt
-                  </button>
-              </div>
-          </div>
-      </div>
-  
-       </section>
-       <!--  /Avböj_offert-->
        <!-- other sections -->
         <section class="Varför_välja_plastkort">
           <div class="text">
